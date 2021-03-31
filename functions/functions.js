@@ -1,7 +1,17 @@
-//Arrow Function
+//Callback function
 
-const SayMyName = (name) => {
-    console.log(name)
+function sayMyName(name){
+
+    console.log('antes de executar a funcao callback')
+
+    name()
+
+    console.log('Depois de executar o callback ')
+
 }
 
-SayMyName('Eron')
+sayMyName(
+    () => {
+        console.log('estou em uma callback')
+    }
+)
